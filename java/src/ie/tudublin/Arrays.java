@@ -58,7 +58,7 @@ public class Arrays extends PApplet {
         // }
         for(int i =0; i<rainfall.length; i++){
             float x = map(i, 0, rainfall.length, 0, width);
-            int c = (int) map(i, 0, rainfall.length, 0, 255);
+            // int c = (int) map(i, 0, rainfall.length, 0, 255);
             rect(x, height, w, -rainfall[i]);
             fill(map(i, 0, bars, 0, 255), 255,255);
             textAlign(CENTER);;
