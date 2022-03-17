@@ -15,7 +15,7 @@ public class Arrays extends PApplet {
     int minIndex = 0;
     int maxIndex  = 0;
 
-    int mode = 0;
+    int mode = 2;
 
     public void keyPressed() {
 		if (key >= '0' && key <= '9') {
