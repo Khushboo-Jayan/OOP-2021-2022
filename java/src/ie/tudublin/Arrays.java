@@ -44,6 +44,7 @@ public class Arrays extends PApplet {
         System.out.println("\n\nMaximum rainfall was " + maximmum + " in month of " + maximmumMonth);
         System.out.println("\n\nAverage rainfall was " + averageRainfall);
         System.out.println("\n\nSum of rainfall was " + sum);
+        //finish rainfall calculation
     }
 
     public void draw(){
@@ -63,12 +64,36 @@ public class Arrays extends PApplet {
         //     // int c = (int) map(i, 0, rainfall.length, 0, 255);
         //     rect(x, height, w, -rainfall[i]);
         //     fill(map(i, 0, bars, 0, 255), 255,255);
-        //     textAlign(CENTER);;
+        //     textAlign(CENTER);
         //     text(months[i], x+(w/2), height-50);
         //     }
 
         switch(mode){
-            case 1: 
+            case 0:
+            background(0);
+            int bars = rainfall.length;
+            float w = width / (float) bars;
+            //float colorGap = 255/(float) bars;
+            for(int i =0; i<bars; i++){
+                noStroke();
+                fill(map(i, 0, bars, 0, 255), 255,255);
+                rect(map(i, 0, bars, 0, 500), height, w, -rainfall[i]*4);
+            }
+                break;
+            case 1:
+            background(0);
+            colorMode(HSB);
+            line(255, 255, 400, 400);
+            stroke(255,0,0);
+            int points = rainfall.length;
+            float mw = width / (float) points;
+            //float colorGap = 255/(float) bars;
+            for(int i =1; i<points; i++){
+                line(mw, rainfall[i-1], mw, rainfall[i]);
+                stroke(255,0,0);
+            }
+                break;
+            case 2: 
                 background(0);
                 float border = width*0.2f;
                 //Draw axis
@@ -83,7 +108,7 @@ public class Arrays extends PApplet {
                     text(i, border/2, y);
                 }
 
-                float w = width/(float) rainfall.length;
+                float w2 = width/(float) rainfall.length;
 
                 for(int i=0; i < rainfall.length; i++){
                     float x = map(i, 0, rainfall.length, border, width);
@@ -91,11 +116,11 @@ public class Arrays extends PApplet {
                     stroke(0);
                     fill(c, 255, 255);
                     float h = map(rainfall[i], 0, 120, 0, -(height+(border*2.0f)));
-                    rect(x,height-border,w,h);
-                    text(months[i], x, (w/2), height-(border/2));
+                    rect(x,height-border,w2,h);
+                    text(months[i], x, (w2/2), height-(border/2));
                 }
                 break;
-            case 2:
+            case 3:
                 background(0);
                 float r = mouseX;
                 float cx = width/2;
