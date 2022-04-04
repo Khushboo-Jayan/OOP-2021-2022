@@ -6,7 +6,7 @@ public class Arrays extends PApplet {
     float[] rainfall = { 45, 37, 55, 27, 38, 50, 79, 48, 104, 31, 100, 58 };
     String[] months = { "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC" };
 
-    int mode = 2;
+    int mode = 1;
 
     public void settings() {
         size(500, 500);
@@ -50,23 +50,6 @@ public class Arrays extends PApplet {
     public void draw(){
         background(0);
         colorMode(HSB);
-		// //int bars = 10;
-		// float bars = rainfall.length ; // changes as he cursor is hovered. 
-		// float w = width / (float) bars;
-		// //float colorGap = 255/(float) bars;
-		// for(int i =0; i<bars; i++){
-        //     noStroke();            
-        //     rect(map(i, 0, bars, 0, 500), 0, w, rainfall[i]*3);
-        //     fill(map(i, 0, bars, 0, 255), 255,255);
-        // }
-        // for(int i =0; i<rainfall.length; i++){
-        //     float x = map(i, 0, rainfall.length, 0, width);
-        //     // int c = (int) map(i, 0, rainfall.length, 0, 255);
-        //     rect(x, height, w, -rainfall[i]);
-        //     fill(map(i, 0, bars, 0, 255), 255,255);
-        //     textAlign(CENTER);
-        //     text(months[i], x+(w/2), height-50);
-        //     }
 
         switch(mode){
             case 0:
@@ -81,17 +64,16 @@ public class Arrays extends PApplet {
             }
                 break;
             case 1:
-            background(0);
-            colorMode(HSB);
-            line(255, 255, 400, 400);
-            stroke(255,0,0);
-            int points = rainfall.length;
-            float mw = width / (float) points;
-            //float colorGap = 255/(float) bars;
-            for(int i =1; i<points; i++){
-                line(mw, rainfall[i-1], mw, rainfall[i]);
-                stroke(255,0,0);
-            }
+                background(0);
+                stroke(255);
+                // line(pmouseX, pmouseY, mouseX, mouseY);
+                // stroke(255,0,0);
+                int points = rainfall.length;
+                float mw = width / (float) points;
+                //float colorGap = 255/(float) bars;
+                for(int i =1; i<=points; i++){
+                    line(mw, rainfall[i-1], mw, -rainfall[i]*4);
+                }
                 break;
             case 2: 
                 background(0);
