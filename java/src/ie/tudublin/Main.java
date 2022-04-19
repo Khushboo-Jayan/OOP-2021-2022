@@ -36,13 +36,13 @@ public class Main
     }
 
 
-    public static void audio1()
+    public static void Audio1()
 	{
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new Audio1());
     }
 
-    public static void audio2()
+    public static void Audio2()
 	{
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new Audio2());
@@ -85,7 +85,8 @@ public class Main
     }
     public static void main(String[] args)
     {
-        YASC();
+        // YASC();
+        Audio1();
 
         // Tara Misty
         // Tara Tara

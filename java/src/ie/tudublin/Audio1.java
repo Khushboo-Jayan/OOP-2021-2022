@@ -98,9 +98,21 @@ public class Audio1 extends PApplet
             {
                 //float c = map(ab.get(i), -1, 1, 0, 255);
                 float c = map(i, 0, ab.size(), 0, 255);
+                float r = map(smoothedAmplitude, 0, 0.5f, 100, 2000);
+                float radius = map(smoothedAmplitude, 0, 0.1f, 50, 300);
+                int points = (int)map(mouseX, 0, 255, 3, 10);
+                    int sides = points * 2;
+                    
+                float theta = map(i, 0, sides, 0, TWO_PI);
+                float px = cx;
+                float x = cx + sin(theta) * r;
+                        float y = cy - cos(theta) * r;
+                    float py = cy - radius;
                 stroke(c, 255, 255);
+                line(px, py, x, y);
                 float f = lerpedBuffer[i] * halfH * 4.0f;
-                line(i, halfH + f, halfH - f, i);                    
+                // line(i, halfH + f, halfH - f, i); 
+                circle(cx, cy, r);                   
             }
             break;
         case 2:
@@ -116,6 +128,8 @@ public class Audio1 extends PApplet
                     for(int i = 0 ; i <= sides ; i ++)
                     {
                         float r = (i % 2 == 0) ? radius : radius / 2; 
+                        // float c = map(smoothedAmplitude, 0, 0.5f, 0, 255);
+                        stroke(c, 255, 255);
                         // float r = radius;
                         float theta = map(i, 0, sides, 0, TWO_PI);
                         float x = cx + sin(theta) * r;
@@ -123,6 +137,7 @@ public class Audio1 extends PApplet
                         
                         //circle(x, y, 20);
                         line(px, py, x, y);
+                        
                         px = x;
                         py = y;
                     }

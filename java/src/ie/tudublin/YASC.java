@@ -4,23 +4,17 @@ import processing.core.PApplet;
 
 public class YASC extends PApplet{
 
-    float x, y, w;
+   Player p;
+   Player p2;
+   Amo a1;
 
-    void drawPlayer(float x, float y, float w){
-        fill(255);
-        beginShape();
-        vertex(x, y);
-        vertex(x - 10, y+20);
-        vertex(x, y+15);
-        vertex(x+10, y+20);
-        endShape();
-    }
 
     public void setup()
     {
-        x = width/2;
-        y = height/2;
-        w = 100;
+        p = new Player(100, 100, 50, this);
+        p2 = new Player(300, 250, 100, this);
+
+        a1  = new Amo(random(width), random(height));
     }
 
     public void settings()
@@ -31,7 +25,10 @@ public class YASC extends PApplet{
     public void draw()
     {
         background(0);
-        drawPlayer(x, y, w);
-
+        Amo.render();
+        p.update();
+        p.render();	
+        p2.update();
+        p2.render();
     }    
 }
