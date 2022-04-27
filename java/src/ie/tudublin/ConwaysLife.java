@@ -96,16 +96,15 @@ public class ConwaysLife extends PApplet {
     }
 
     public void keyPressed() {
-        // the value of mode will be the number of the
-        // number key pressed
-        if (keyCode >= '0' && keyCode <= '9')
-            mode = keyCode - '0';
-        if(keyCode == ' '){
+        if(keyCode == '1'){
             for(int y=0; y<row; y++){
                 for(int x=0; x<col; x++){
                     board[x][y] = (int)random(2);
                 }
             }
+        }
+        if(keyCode == '2'){
+            background(0);
         }
     }
 }
