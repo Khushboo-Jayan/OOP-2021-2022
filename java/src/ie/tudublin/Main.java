@@ -48,8 +48,15 @@ public class Main
         processing.core.PApplet.runSketch( a, new Week6());
     }
 
+    //Game of life
+    public static void lifeForm()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new ConwaysLife());
+    }
+
     public static void main(String[] args)
     {
-        audio();
+        lifeForm();
     }
 }
