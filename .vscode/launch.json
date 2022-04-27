@@ -1,22 +1,15 @@
 {
     "configurations": [
-        // {
-        //     "type": "java",
-        //     "name": "Launch Main",
-        //     "request": "launch",
-        //     "mainClass": "ie.selfStudy.Main",
-        //     "projectName": "java"
-        // },
         {
             "type": "java",
             "name": "Launch Main",
             "request": "launch",
             "mainClass": "ie.tudublin.Main",
-            "projectName": ""
+            "projectName": "java (2)"
         },
         {
             "type": "java",
-            "name": "CodeLens (Launch) - Main",
+            "name": "Launch Main",
             "request": "launch",
             "mainClass": "ie.tudublin.Main",
             "projectName": "java"
