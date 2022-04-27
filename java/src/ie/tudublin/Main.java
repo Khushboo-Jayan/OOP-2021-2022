@@ -92,7 +92,7 @@ public class Main
     public static void main(String[] args)
     {
         // YASC();
-        Audio1();
+        YASC();
 
         // Tara Misty
         // Tara Tara
