@@ -55,8 +55,16 @@ public class Main
         processing.core.PApplet.runSketch( a, new ConwaysLife());
     }
 
+    //Swarm Simulation
+    public static void swarms()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new SwarmVisualisation());
+    }
+
+
     public static void main(String[] args)
     {
-        lifeForm();
+        swarms();
     }
 }
