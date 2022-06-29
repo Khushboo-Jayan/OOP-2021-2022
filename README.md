@@ -48,11 +48,14 @@ Resources
 
 ## Week 12 - Bullets and singing
 
+<<<<<<< HEAD
 - [Last years Week 12 - Interface, bullets etc etc](https://www.youtube.com/watch?v=QVWeU7rFlo4)
 
 ### Tutorial
 - [Video of the Tutorial](https://tudublin-my.sharepoint.com/:v:/g/personal/bryan_duggan_tudublin_ie/EQkrjC3VHYxEq5xRr_5KKHoB1-MqhIoHUID305zkc8KbZw?e=e5ixaH)
 
+=======
+>>>>>>> 6f42998f072c57530161da104bcdd7d156681b0a
 ### Lab
 - [Lab Test](https://github.com/skooter500/OOP-Test-2022-Starter)
 
